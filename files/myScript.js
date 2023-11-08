@@ -221,6 +221,9 @@ function menuState(state) {
 		$( "#git_pass" ).text(JSONdata.account.github.password);
 		$( "#spoti_name" ).text(JSONdata.account.spotify.nickname);
 		$( "#spoti_pass" ).text(JSONdata.account.spotify.password);
+		$( "#linke_name" ).text(JSONdata.account.spotify.nickname);
+		$( "#linke_pass" ).text(JSONdata.account.spotify.password);
+		
 		
 		
 	} else if(state == 5) {
@@ -378,6 +381,7 @@ $( document ).ready(function() {
 			$("#account_adding_info").text("Editing: " + $(temp_acc_id).children(".social_header").text());
 			$("#AccountNameInput").attr("placeholder", $(temp_acc_id).children(".copy_button:eq(0)").text());
 			$("#AccountPassInput").attr("placeholder", $(temp_acc_id).children(".copy_button:eq(1)").text());
+			$("#AccountNameInput, #AccountPassInput").val("");
 		}
 	});
 	
@@ -622,6 +626,7 @@ function submitACC_JSON() {
 	JSONdata.account.github.password = $( "#git_pass" ).text();
 	JSONdata.account.spotify.nickname = $( "#spoti_name" ).text();
 	JSONdata.account.spotify.password = $( "#spoti_pass" ).text();
+	
 	uploadJSON(JSONdata, readCookie(key_cookie));
 }
 
