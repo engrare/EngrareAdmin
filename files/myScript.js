@@ -318,7 +318,7 @@ function submitOneWebPart() {
 		if(link_temp.includes("https://drive.google.com/thumbnail?id=")) {
 			websiteJSON.website.slide.content[element_index].bgimglink = link_temp;
 		} else if(link_temp.includes("https://drive.google.com/file/d/")) {
-			websiteJSON.website.slide.content[element_index].bgimglink = "https://drive.google.com/thumbnail?id=" + link_temp.slice(link_temp.indexOf("/d/") + 3, link_temp.lastIndexOf("/")) + "&sz=w5000";
+			websiteJSON.website.slide.content[element_index].bgimglink = "https://drive.google.com/thumbnail?id=" + link_temp.slice(link_temp.indexOf("/d/") + 3, link_temp.lastIndexOf("/")) + "&sz=w2000";
 			//console.log(websiteJSON.website.slide.content[element_index].bgimglink);
 		} else {
 			websiteJSON.website.slide.content[element_index].bgimglink = "";
@@ -333,7 +333,7 @@ function submitOneWebPart() {
 		if(link_temp.includes("https://drive.google.com/thumbnail?id=")) {
 			websiteJSON.website.corner[element_index].bgimglink = link_temp;
 		} else if(link_temp.includes("https://drive.google.com/file/d/")) {
-			websiteJSON.website.corner[element_index].bgimglink = "https://drive.google.com/thumbnail?id=" + link_temp.slice(link_temp.indexOf("/d/") + 3, link_temp.lastIndexOf("/")) + "&sz=w5000";
+			websiteJSON.website.corner[element_index].bgimglink = "https://drive.google.com/thumbnail?id=" + link_temp.slice(link_temp.indexOf("/d/") + 3, link_temp.lastIndexOf("/")) + "&sz=w2000";
 			console.log(websiteJSON.website.corner[element_index].bgimglink);
 		} else {
 			websiteJSON.website.corner[element_index].bgimglink = "";
